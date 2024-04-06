@@ -5,4 +5,4 @@ async function getUser(userName) {
     return response.json()
 }
 
-export {getUser}
+export { getUser }

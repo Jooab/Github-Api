@@ -123,15 +123,37 @@ main {
 
 /* REPOSITORIES */
 
-.container .profile-data .repositories h2{
+.container .profile-data .repositories h2,
+.container .profile-data .events h2{
   margin-bottom: 30px;
   text-align: center;
+}
+
+.container .profile-data .events ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container .profile-data .events ul li {
+  margin-bottom: 20px;
 }
 
 .container .profile-data .repositories ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.container .profile-data .events ul{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container .profile-data .events ul li span{
+  font-weight: 700;
 }
 
 .container .profile-data .repositories ul li a{
@@ -147,6 +169,21 @@ main {
   background-color:hotpink;
   color: #fff
 }
+
+.container .profile-data .repositories .repository-info{
+  margin: 15px 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container .profile-data .repositories .repository-info .info{
+  margin: 0 8px;
+  padding: 5px;
+  background-color: #6a5acd;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
 
 .container .profile-data.hide{
   display: none;
@@ -169,11 +206,15 @@ main {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .container header #input-search,
   .container header #btn-search
   {
     width: 100%;
+  }
+
+  .container .profile-data .info {
+      flex-direction: column;
   }
 }
 
@@ -192,4 +233,8 @@ main {
     width: 100%;
     padding: 0;
   }
+}
+
+.container .profile-data .info .data p {
+  margin-bottom: 15px;
 }
