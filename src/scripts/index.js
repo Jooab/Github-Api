@@ -54,8 +54,6 @@ function validateEmptyInput(userName) {
     }
 }
 
-console.log(await getRepositories('Jooab'))
-
 
 
 
