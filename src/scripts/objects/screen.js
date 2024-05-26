@@ -38,7 +38,6 @@ const screen = {
                                              <div class="info">👨‍💻  Sem linguagem</div>
                                              </div>
                                               </a>
-                                       
                                              </li>` }
 
 
@@ -55,12 +54,12 @@ const screen = {
       let eventsItens = ""
       user.events.forEach(function (event) {
 
-         if (event.type === "CreateEvent") { eventsItens += 
-          `<li><span>${event.repo.name}</span> - Sem mensagem de Commit</li>`
-         }
-
-         else if (event.payload.commits.length > 0 && event.type === "PushEvent") { eventsItens += 
-         `<li><span>${event.repo.name}</span> - ${event.payload.commits[0].message}</li>`
+         if (event.type === 'PushEvent') {
+            eventsItens += 
+            `<li><span>${event.repo.name}</span> - ${event.payload.commits[0].message}</li>`
+         } else {
+            eventsItens += 
+            `<li><span>${event.repo.name}</span> - Sem mensagem de Commit</li>`
          }
       })
 
